@@ -38,7 +38,7 @@ app.post('/users', (request, response) => {
     id: uuidv4(),
     name,
     username,
-    todo: [],
+    todos: [],
   }
 
   users.push(user);
@@ -63,7 +63,7 @@ app.post('/todos', checksExistsUserAccount, (request, response) => {
     title,
     done: false,
     deadline: new Date(deadline),
-    create_at: new Date()
+    created_at: new Date()
   }
 
   user.todos.push(todo);
